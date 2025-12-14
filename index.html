@@ -1,0 +1,181 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Navbar</title>
+	
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href= "stylesheet2.css">
+	<link rel="stylesheet" href= "styleshee3.css">
+	
+	<script src="menu.js" defer></script>
+
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="logo">
+      <a href="index.html" aria-label="Go to homepage">
+        <img src="images/Maricel-logo.png" alt="Maricel Salvador Logo">
+      </a>
+    </div>
+    <div class="nav-links">
+     
+      <a href="#folio" class="folio">Works</a>
+      <a href="#contact" class="message" data-open="contactModal">Contact</a>
+    </div>
+  </div>
+</nav>
+
+ <div class="about">
+     <div>
+		 <p>Art Direction | Graphic Design</p>
+		 <h1>Maricel Salvador</h1>
+		 <p>I’m a Graphic Designer and Art Director with a passion for shaping visuals and solving design problems. I approach every project with a blend of intuition, design thinking, and attention to detail. My goal is simple: make ideas memorable, and beautifully executed.</p>
+		 <!-- Trigger button -->
+         <button class="contact-trigger" data-open="contactModal"><a href="#contact" class="contact-trigger">Contact</a></button>
+	 </div>
+	 
+<!-----This the MODAL CODE----->
+	 
+	   <!-- Modal overlay -->
+  <div id="contactModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-title" aria-hidden="true">
+    <div class="modal" role="document">
+      <div class="modal-header">
+        <h2 id="contact-title" class="modal-title">Message me</h2>
+        <button class="close-btn" aria-label="Close" data-close>&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label class="label" for="name"></label>
+            <input class="input" id="name" name="name" type="text" placeholder="Name" required />
+          </div>
+          <div class="field">
+            <label class="label" for="email"></label>
+            <input class="input" id="email" name="email" type="email" placeholder="yourname@email.com" required />
+          </div>
+          <div class="field">
+            <label class="label" for="message"></label>
+            <textarea class="textarea" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn primary">Send</button>
+            <button type="button" class="btn secondary" data-close>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+	 
+<!----------------------------->
+	 
+	 <div>
+		 <img src="images/Group 4.png" alt="Maricel Salvador Portfolio Graphic" class="portfolio-img">
+	 </div>
+	
+</div>
+	
+<div class="skills">
+	
+	<section class="cards-section">
+  <div class="card">
+	  <div><img src="images/graphic-design-2.gif" alt="Maricel Salvador Graphic Design" class="skills-1"></div>
+    <h2>Graphic Design</h2>
+    <p>I try to balance creativity and clarity. The aim is to get the message across through thoughtful visuals.</p>
+  </div>
+
+  <div class="card">
+	<div><img src="images/art-director-2.gif" alt="Maricel Salvador Art Direction" class="skills-1"></div>
+    <h2>Art Direction</h2>
+    <p>I love storytelling. I use it to shape my visions and ideas for an  effective and impactful visual communication.</p>
+  </div>
+</section>
+	
+</div>
+	
+<div class="works" id="folio">
+	<h1>Works</h1>
+	<div class="works-2">
+	<div class="cards-works">
+		<div class="card-2">
+			<a href="social-media.html"><img src="images/Social Media.png" alt="Maricel Salvador Social Media" class="skills-2"></a>
+		</div>
+		<h2 class="works-title" style="align-content: center;">Social Media</h2>
+	</div>
+	
+	<div class="cards-works">
+		<div class="card-2">
+			<a href="illustration.html"><img src="images/Illustrations.png" alt="Maricel Salvador Illustrations" class="skills-2"></a>
+		</div>
+		<h2 class="works-title" style="align-content: center;">Illustration</h2>
+		
+	</div>
+	
+	<div class="cards-works">
+		<div class="card-2">
+			<a href="magazine.html"><img src="images/Magazines.png" alt="Maricel Salvador Magazines" class="skills-2"></a>
+		</div>
+		<h2 class="works-title" style="align-content: center;">Magazine</h2>
+	</div>
+	
+		<div class="cards-works">
+		<div class="card-2">
+			<a href="eblast.html"><img src="images/E-blasts.png" alt="Maricel Salvador E-blasts" class="skills-2"></a>
+		</div>
+			<h2 class="works-title" style="align-content: center;">E-Blast</h2>
+	</div>
+	
+	<div class="cards-works">
+		<div class="card-2">
+			<a href="infographic.html"><img src="images/Infographics.png" alt="Maricel Salvador Infographics" class="skills-2"></a>
+		</div>
+		<h2 class="works-title" style="align-content: center;">Infographic</h2>
+	</div>
+	
+	<div class="cards-works">
+		<div class="card-2">
+			<a href="powerpoint.html"><img src="images/Powerpoint.png" alt="Maricel Salvador Powerpoint" class="skills-2"></a>
+		</div>
+		<h2 class="works-title" style="align-content: center;">Powerpoint</h2>
+	</div>
+		</div>
+</div>
+	
+	<div class="footer">
+	<div class="call-to-action">
+		<h1>Let's work together</h1>
+		<p>I bring thoughtful design and strong execution. I’d be grateful for the chance to join your team.</p>
+		
+		<div class="footer-menu">
+		<a href="#" aria-label="Go to Behance"><img src="images/behance.png" alt="behance logo"></a>
+		<a href="#" aria-label="Go to LinkedIn"><img src="images/linkedin.png" alt="linkedin logo"></a>
+		<a href="#" aria-label="Go to email"><img src="images/email.png" alt="email logo"></a>
+	    </div>
+	</div>
+</div>
+	
+<div class="container">
+			<!-- Hamburger Icon -->
+<div class="menu-toggle" id="menu-toggle">
+ <img src="images/Maricel-logo-2.png" alt="Maricel logo2">
+</div>
+
+<!-- Hidden Floating Menu -->
+<div class="floating-menu" id="floating-menu">
+  <a href="social-media.html">Social Media</a>
+  <a href="illustration.html">Illustration</a>
+  <a href="magazine.html">Magazine</a>
+  <a href="eblast.html">E-Blast</a>
+  <a href="infographic.html">Infographic</a>
+  <a href="powerpoint.html">Powerpoint</a>
+</div>
+	
+</div>
+</body>
+</html>
+
+
+

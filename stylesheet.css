@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+   margin:0px, 10px, 0px, 10px;
+   font-family: Arial, sans-serif;
+   padding-top: 60px;        /* equal to navbar height */
+      
+    }
+
+/* Navbar outer wrapper */
+.navbar {
+  position: fixed;          /* lock to top */
+  top: 0;
+  left: 0;
+  width: 100%;              /* full width */
+  height: 60px;             /* fixed height */
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+   padding: 0 20px;          /* space on left & right */
+  box-sizing: border-box;   /* include padding in width */
+}
+
+/* Inner container for centering */
+.navbar-inner {
+  max-width: 1000px;        /* constrain content */
+  margin: 0 auto;           /* center horizontally */
+  height: 100%;             /* match navbar height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 100%;             /* fill navbar height */
+  max-height: 60px;         /* cap at navbar height */
+  width: auto;
+  display: block;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color:#FF4DB3;
+}
+
+/* About Section */
+.about {
+  display: flex;                  /* Activate flexbox */
+  justify-content: center;        /* Center horizontally */
+  align-items: center;            /* Center vertically */
+  gap: 40px;                      /* Space between text and image */
+  padding: 40px;                  /* Breathing room around section */
+  max-width: 1000px;              /* Limit width */
+  margin: 0 auto;                 /* Center the section itself */
+  text-align:left             /* Center text inside */
+}
+
+.contact-trigger {
+  padding: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: none;
+  font-size: 14px;
+}
+
+/* Text block */
+.about div:first-child {
+  flex: 1;                        /* Take available space */
+  max-width: 600px;               /* Limit width for readability */
+}
+
+/* Image block */
+.about img {
+  max-width: 400px;               /* Control image size */
+  width: 100%;                    /* Scale responsively */
+  height: auto;                   /* Keep aspect ratio */
+  display: block;                 /* Remove inline spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;       /* Stack text above image */
+    gap: 20px;                    /* Reduce spacing */
+    padding: 20px;                /* Smaller padding */
+  }
+
+  .about div:first-child {
+    max-width: 100%;              /* Allow text to span full width */
+  }
+
+  .about img {
+    max-width: 100%;              /* Image scales to container */
+  }
+}
+
+/* Skills Section */
+
+.cards-section {
+  display: flex;                  /* Place cards side by side */
+  justify-content: center;        /* Center them horizontally */
+  gap: 40px;                      /* Space between cards */
+  max-width: 1000px;              /* Limit section width */
+  margin: 0 auto;                 /* Center section on page */
+  padding: 40px 20px;             /* Breathing room */
+}
+
+.card {
+  flex: 1;                        /* Equal width for both cards */
+  padding: 20px;
+  border-radius: 8px;             /* Rounded corners */
+  text-align: center;             /* Center text */
+}
+
+.card h2 {
+  font-weight: bold;              /* Bold title */
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.skills-1 {
+  max-width: 100px;
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;       /* Stack vertically */
+    gap: 20px;
+  }
+}
+
+/* Works Section */
+
+.works {text-align: center;
+  margin-top: 40px;
+}
+.works-2 {
+  display: flex;                  /* Place cards side by side */
+  justify-content: center;        /* Center them horizontally */
+  flex-wrap: wrap;                /* Allow wrapping on small screens */
+  gap: 10px;                      /* Space between cards */
+  max-width: 1000px;              /* Limit section width */
+  margin: 0 auto;                 /* Center section on page */
+  padding: 10px, 10px;             /* Breathing room */
+  text-align: center;
+}
+
+.cards-works {
+  flex: 1 1 250px;                /* Flexible width, min 250px */
+  display: flex;                  /* Keep inner card aligned */
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.skills-2 {
+  max-width: 300px;
+  width: 100%;                    /* Scale responsively */
+  height: auto;
+  display: block;
+}
+ 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .works-2 {
+    flex-direction: column;       /* Stack cards vertically */
+    align-items: center;
+  }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;          /* allow items to wrap on smaller screens */
+  max-width: 1000px;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 20px;
+  gap: 20px;                /* space between columns */
+  z-index: 1;
+}
+
+.call-to-action {
+	flex: 1 1 300px;          /* flexible width, min 300px */
+	max-width: 500px;
+}
+    
+/* Button */
+.contact-form button {
+  background-color: #000;     /* Black background */
+  color: #fff;                /* White text */
+  border: none;               /* Remove default border */
+  padding: 24px 24px;         /* Size of the button */
+  margin-top:auto;
+  font-size: 16px;            /* Text size */
+  cursor: pointer;            /* Pointer on hover */
+  border-radius: 4px;         /* Slightly rounded corners */
+  transition: background-color 0.3s ease;
+  font-style: none;
+}
+
+/* Prevent overlap with content */
+body {
+  padding-top: 60px;     /* equal to navbar height */
+
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    text-align: center;
+  }
+  .call-to-action,
+  .contact-wrap {
+  max-width: 100%;          /* take full width */
+  }
+  .footer-menu {
+    margin-top: 15px;
+  }
+}
+
+
+
+
+
+
+

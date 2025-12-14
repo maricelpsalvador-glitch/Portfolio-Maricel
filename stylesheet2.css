@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container-works {
+  display:flex; 
+  flex-direction:column;
+  align-items:center; 
+  justify-content:center;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  	 
+}
+.allwork-title{
+  margin: 30px;
+  text-align: center;
+}
+.masonry {
+  display: flex;
+  flex-direction: column;   /* stack rows vertically */
+  gap: 1rem;                /* space between rows */
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {	
+  display: flex;            /* items side by side in a row */
+  gap: 1rem;
+}
+
+.item {
+  flex: 1;                  /* items share space equally */
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px #E8E5E5;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.works-row {
+  display: flex;              /* puts children side by side */
+  justify-content: flex-start;/* align items to the left horizontally */
+  align-items: flex-start;    /* align items to the top vertically */
+  gap: 20px; 
+}
+
+.works-column {
+  display:grid;            
+  justify-content: flex-start;/* align items to the left horizontally */
+  align-items: flex-start;    /* align items to the top vertically */
+  gap: 20px; 
+  max-width: 325px;
+}
+.works-column2 {
+  display: grid;
+  grid-auto-rows: min-content; /* rows sized to content */
+  gap: 20px;                   /* spacing between rows */
+  justify-items: start;        /* align items to the left */
+}
+
+.item2 {
+  background: #FFFFFF;
+  overflow: hidden;
+  
+}
+.item2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.works-row img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.works-side {
+  display: flex;
+}
+
+.container-works-wrap {
+	display: flex;
+	flex-direction: row;
+	column-gap: 20px;
+	max-width: 1000px;
+	}
+
+/* Heart button */
+.menu-toggle {
+  position: fixed;
+  top: 12%; /* slightly above middle */
+  right: 0;
+  background: rgba(0, 0, 0, 0.100); /* 20% more transparent */
+  color: #fff;
+  width: 50px;       /* set fixed width */
+  height: 50px;      /* set fixed height */
+  display: flex;     /* center the icon/text */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%; /* makes it a circle */
+  font-size: 20px;
+  z-index: 1100;
+}
+
+/* Floating menu hidden by default */
+.floating-menu {
+  position: fixed;
+  top: calc(13% + 42px);   /* starts exactly at bottom of hamburger */
+  right: -100%;            /* hidden fully off-page */
+  background: rgba(0, 0, 0, 0.80);
+  padding: 20px 20px 20px 0px;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  width: max-content;      /* auto-fit longest word */
+  white-space: nowrap;     /* prevent wrapping */
+}
+
+.floating-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+
+.floating-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Show menu when active */
+.floating-menu.active {
+  right: 0; /* slides flush against the right edge */
+}
+
+
+/* -----------------------------*/
+/* Responsive stacking for mobile */
+@media (max-width: 768px) {
+ .row,
+ .works-row {
+    flex-direction: column;   /* stack items vertically */
+    align-items: center;      /* center them horizontally */
+  }
+
+  .item {
+    width: 100%;              /* take full width */
+    max-width: 500px;         /* optional limit for nicer look */
+  }
+}
