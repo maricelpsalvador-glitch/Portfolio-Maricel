@@ -144,13 +144,7 @@ body {
   max-width: 100px;
 }
 
-/* Responsive: stack cards on small screens */
-@media (max-width: 768px) {
-  .cards-section {
-    flex-direction: column;       /* Stack vertically */
-    gap: 20px;
-  }
-}
+
 
 /* Works Section */
 
@@ -181,6 +175,96 @@ body {
   width: 100%;                    /* Scale responsively */
   height: auto;
   display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.skills-2:hover {
+  content: url("images/Social-Media.gif");
+}
+
+.skills-3 {
+  max-width: 300px;
+  width: 100%;                    /* Scale responsively */
+  height: auto;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.skills-3:hover {
+  content: url("images/Illustration.gif");
+}
+
+.skills-4 {
+  max-width: 300px;
+  width: 100%;                    /* Scale responsively */
+  height: auto;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.skills-4:hover {
+  content: url("images/Magazine-2.gif");
+}
+
+.skills-5 {
+  max-width: 300px;
+  width: 100%;                    /* Scale responsively */
+  height: auto;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.skills-5:hover {
+  content: url("images/e-blast.gif");
+}
+
+.skills-6 {
+  max-width: 300px;
+  width: 100%;                    /* Scale responsively */
+  height: auto;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.skills-6:hover {
+  content: url("images/infographic.gif");
+}
+
+.skills-7 {
+  max-width: 300px;
+  width: 100%;                    /* Scale responsively */
+  height: auto;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.skills-7:hover {
+  content: url("images/powerpoint.gif");
+}
+
+
+/* Base: show static image */
+.responsive-gif {
+  content: url("static-image.jpg");
+}
+
+/* Small screens: always show GIF */
+@media (max-width: 768px) {
+  .responsive-gif {
+    content: url("images/Social-Media.gif");
+  }
+}
+
+/* Desktop: swap to GIF only on hover */
+@media (min-width: 769px) {
+  .responsive-gif:hover {
+    content: url("images/Social-Media.gif");
+  }
+}
+
+
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;       /* Stack vertically */
+    gap: 20px;
+  }
 }
  
 /* Responsive adjustments */

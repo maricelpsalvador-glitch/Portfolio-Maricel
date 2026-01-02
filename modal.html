@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Modal</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styleshee3.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+
+  <!-- Trigger button -->
+  <button class="contact-trigger" data-open="contactModal">Contact me</button>
+
+  <!-- Modal overlay -->
+  <div
+    id="contactModal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-title"
+    aria-hidden="true"
+  >
+    <div class="modal" role="document">
+      <div class="modal-header">
+        <h2 id="contact-title" class="modal-title">Contact me</h2>
+        <button class="close-btn" aria-label="Close" data-close>&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label class="label" for="name">Name</label>
+            <input class="input" id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label class="label" for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label class="label" for="message">Message</label>
+            <textarea class="textarea" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn primary">Send</button>
+            <button type="button" class="btn secondary" data-close>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
