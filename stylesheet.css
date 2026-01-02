@@ -179,7 +179,7 @@ body {
 }
 
 .skills-2:hover {
-  content: url("images/Social-Media.gif");
+  content: url("images/social-media.gif");
 }
 
 .skills-3 {
@@ -223,7 +223,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .skills-6:hover {
-  content: url("images/infographic.gif");
+  content: url("images/Infographic.gif");
 }
 
 .skills-7 {
